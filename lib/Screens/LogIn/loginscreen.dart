@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:instagram_ui_clone/Screens/BottomNav/bottomnav.dart';
 import 'package:instagram_ui_clone/Screens/LogIn/signupscreen.dart';
 import 'package:instagram_ui_clone/Widgets/uihelper.dart';
 
@@ -37,7 +38,11 @@ class _LogInScreenState extends State<LogInScreen> {
                 )
               ],
             ),
-            UiHelper.CustomButton(callback: (){}, text: "Log In"),
+            UiHelper.CustomButton(callback: (){
+              Navigator.pushReplacement(context, MaterialPageRoute(builder: (context){
+                return BottomNavScreen();
+              }));
+            }, text: "Log In"),
             SizedBox(height: 25,),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
