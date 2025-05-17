@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:instagram_ui_clone/Screens/Messages/messagesscreen.dart';
 import 'package:instagram_ui_clone/Widgets/uihelper.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -93,11 +94,15 @@ class _HomeScreenState extends State<HomeScreen> {
           SizedBox(
             width: 15,
           ),
-          Image.asset(
+          GestureDetector(onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context){
+              return MessagesScreen();
+            }));
+          }, child: Image.asset(
             "assets/images/Messanger.png",
-          ),
+          ),),
           SizedBox(
-            width: 25,
+            width: 18,
           )
         ],
       ),

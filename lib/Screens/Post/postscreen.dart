@@ -5,10 +5,9 @@ class PostScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-        body:Center(
-          child: Text("Post Screen"),
-        )
+    return DefaultTabController(length: 2, child: TabBar(tabs: [
+
+    ])
     );
   }
 }
